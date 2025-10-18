@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f74fe56143ef98991afbf9b023a05426df77014d")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

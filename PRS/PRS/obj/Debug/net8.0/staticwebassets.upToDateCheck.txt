@@ -1,5 +1,11 @@
-wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\emotions\emotions.png
+wwwroot\images\happy\happy_1.png
+wwwroot\images\sad\sad_1.png
+wwwroot\images\sad\sad_2.png
+wwwroot\images\sad\sad_3.png
+wwwroot\images\sad\sad_4.png
+wwwroot\js\emotions.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -58,3 +64,5 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\emotions.css
+wwwroot\css\site.css

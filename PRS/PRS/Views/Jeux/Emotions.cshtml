@@ -1,8 +1,23 @@
 ﻿@{
-    ViewData["Titlte"] = "Émotions";
+    ViewData["Title"] = "Émotions";
 }
 
-<div class="text-center">
+@section Styles {
+    <link rel="stylesheet" href="~/css/emotions.css" />
+}
+
+@section Scripts {
+    <script src="~/js/emotions.js"></script>
+}
+
+<div class="flex-container flex-column text-center height100">
     <h1 class="display-4">Emotions</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="flex-item">
+        <img class="img-fit" src="~/images/happy/happy_1.png" alt="Alternate Text" />
+    </div>
+    <div class="flex-item">Choisis une emotion.</div>
+    <div id="emotions-choice-container" class="flex-item flex-container flex-row">
+        <button><img class="img-fit" src="~/images/sad/sad_1.png" alt="Alternate Text" /></button>
+        <button><img class="img-fit" src="~/images/sad/sad_2.png" alt="Alternate Text" /></button>
+    </div>
 </div>

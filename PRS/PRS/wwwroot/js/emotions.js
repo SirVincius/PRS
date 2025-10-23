@@ -1,5 +1,7 @@
 ﻿window.onload = function () {
-    document.getElementById("image-button").addEventListener("click", () => {
-        document.getElementById("img-angry").classList.toggle("hidden");
-    })
+    alert("Script loaded!");
+    var buttons = document.querySelectorAll("button img");
+    buttons.forEach(button => button.addEventListener("click", () => {
+        button.classList.toggle("button-selected");
+    }))
 };

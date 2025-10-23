@@ -1,5 +1,6 @@
 ﻿:root {
     --button-bg-white: white;
+    --button-bg-grey: grey;
     --red-wrong: rgb(208, 65, 65);
     --green-right: rgb(63, 207, 52);
 }
@@ -28,10 +29,7 @@ button img {
 }
 
 button img:hover:active {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 8px solid var(--button-bg-white);
+    border: 8px solid var(--button-bg-grey);
     border-style: inset;
 }
 
@@ -57,17 +55,16 @@ button img:hover:active {
 }
 
 .wrong-choice {
-    display: block;
-    width: 100%;
-    height: 100%;
     border: 8px solid var(--red-wrong);
-    border-style: inset;
+    border-style: outset;
 }
 
 .right-choice {
-    display: block;
-    width: 100%;
-    height: 100%;
     border: 8px solid var(--green-right);
+    border-style: outset;
+}
+
+.button-selected {
+    border: 8px solid var(--button-bg-grey);
     border-style: inset;
 }

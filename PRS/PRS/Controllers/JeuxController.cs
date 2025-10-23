@@ -13,5 +13,10 @@ namespace PRS.Controllers
         {
             return View();
         }
+
+        public IActionResult EmotionsSelect()
+        {
+            return View();
+        }
     }
 }

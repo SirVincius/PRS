@@ -1,6 +1,16 @@
+wwwroot\css\emotions.css
+wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\images\emotions\emotions.png
+wwwroot\images\emotions\Anger.jpg
+wwwroot\images\emotions\Fear.jpg
+wwwroot\images\emotions\Joy.jpg
+wwwroot\images\emotions\Love.jpg
+wwwroot\images\emotions\Sadness.jpg
+wwwroot\images\emotions\Serenity.jpg
 wwwroot\images\happy\happy_1.png
+wwwroot\images\numbers\number_10.png
+wwwroot\images\numbers\number_15.png
+wwwroot\images\numbers\number_5.png
 wwwroot\images\sad\sad_1.png
 wwwroot\images\sad\sad_2.png
 wwwroot\images\sad\sad_3.png
@@ -64,5 +74,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\emotions.css
-wwwroot\css\site.css

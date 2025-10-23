@@ -32,6 +32,10 @@ html, body {
     display: flex;
 }
 
+.flex-item {
+    height: 200px;
+}
+
 .flex-column {
     flex-direction: column;
 }

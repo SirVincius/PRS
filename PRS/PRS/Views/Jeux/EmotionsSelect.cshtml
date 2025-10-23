@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Jeux des émotions";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/emotions.css" />
+}
+
+@section Scripts {
+    <script src="~/js/emotions.js"></script>
+}
+
+<div class="flex-container flex-column text-center height100">
+    <h1 class="display-4">Choisissez le nombre d'émotion a reconnaître</h1>
+    <div id="numberOfPhotoToRecognize" class="choice-container">
+        <button class="button-100"><img class="img-fit" src="~/images/numbers/number_5.png" alt="Alternate Text" /></button>
+        <button class="button-100"><img class="img-fit" src="~/images/numbers/number_10.png" alt="Alternate Text" /></button>
+        <button class="button-100"><img class="img-fit" src="~/images/numbers/number_15.png" alt="Alternate Text" /></button>
+    </div>
+    <div id="emotionsToRecognize" class="choice-container">
+        <button class="button-100"><img class="img-fit" src="~/images/emotions/Joy.jpg" alt="Alternate Text" /></button>
+        <button class="button-100"><img class="img-fit" src="~/images/emotions/Sadness.jpg" alt="Alternate Text" /></button>
+        <button class="button-100"><img class="img-fit" src="~/images/emotions/Anger.jpg" alt="Alternate Text" /></button>
+        <button class="button-100"><img class="img-fit" src="~/images/emotions/Fear.jpg" alt="Alternate Text" /></button>
+        <button class="button-100"><img class="img-fit" src="~/images/emotions/Serenity.jpg" alt="Alternate Text" /></button>
+        <button class="button-100"><img class="img-fit" src="~/images/emotions/Love.jpg" alt="Alternate Text" /></button>
+    </div>
+</div>

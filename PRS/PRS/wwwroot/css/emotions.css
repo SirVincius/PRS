@@ -1,33 +1,53 @@
-﻿.flex-item {
-    height: 300px;
+﻿:root {
+    --button-bg-white: white;
+    --red-wrong: rgb(208, 65, 65);
+    --green-right: rgb(63, 207, 52);
+}
+
+.choice-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
 }
 
 button {
-    position: relative;
-    height: 200px;
-    width: 200px;
     padding: 0;
     border: 1px solid black;
+    background-color: var(--button-bg-white);
 }
 
 button img {
     display: block;
     width: 100%;
     height: 100%;
-    border: 8px solid black;
+    border: 8px solid white;
     border-style: outset;
+    background-color: var(--button-bg-white);
 }
 
 button img:hover:active {
     display: block;
     width: 100%;
     height: 100%;
-    border: 8px solid black;
+    border: 8px solid var(--button-bg-white);
     border-style: inset;
 }
 
-#emotions-button-container {
+.just-even {
     justify-content: space-evenly;
+}
+
+.button-100 {
+    height: 100px;
+    width: 100px;
+}
+
+.button-200 
+{
+    height: 200px;
+    width: 200px;
 }
 
 .img-fit {
@@ -36,6 +56,18 @@ button img:hover:active {
     object-fit: contain;
 }
 
-#emotions-choice-container {
-    justify-content: space-evenly;
+.wrong-choice {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 8px solid var(--red-wrong);
+    border-style: inset;
+}
+
+.right-choice {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 8px solid var(--green-right);
+    border-style: inset;
 }

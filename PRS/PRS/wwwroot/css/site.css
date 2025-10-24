@@ -1,3 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --button-bg-white: white;
+    --button-bg-grey: grey;
+    --red-wrong: rgb(208, 65, 65);
+    --green-right: rgb(63, 207, 52);
+}
+
 html {
   font-size: 14px;
 }
@@ -42,4 +55,12 @@ html, body {
 
 .flex-row {
     flex-direction: row;
+}
+
+.choice-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
 }

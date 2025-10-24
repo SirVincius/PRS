@@ -13,45 +13,30 @@
     height: 200px;
 }
 
-button {
-    padding: 0;
-    border: 1px solid black;
-    background-color: var(--button-bg-white);
-}
-
-button img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 8px solid white;
-    border-style: outset;
-    background-color: var(--button-bg-white);
-}
-
-button img:hover:active {
-    border: 8px solid var(--button-bg-grey);
-    border-style: inset;
-}
-
-.just-even {
-    justify-content: space-evenly;
-}
-
-.button-100 {
+.button-container {
     height: 100px;
     width: 100px;
+    border: 1px solid var(--button-bg-grey);
 }
 
-.button-200 
-{
-    height: 200px;
-    width: 200px;
+.height-100 {
+    height: 100px;
 }
 
-.img-fit {
+.img-container {
+    height: 100%;
+    width: 100%;
+    border: 8px outset var(--button-bg-white);
+}
+
+.button-image {
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+
+.img-container:hover:active {
+    border: 8px inset var(--button-bg-grey);
 }
 
 .wrong-choice {

@@ -1,8 +1,13 @@
 ﻿:root {
     --button-bg-white: white;
-    --button-bg-grey: grey;
     --red-wrong: rgb(208, 65, 65);
     --green-right: rgb(63, 207, 52);
+    --green-light: rgb(52, 226, 38);
+}
+
+button {
+    font-family: 'Segoe Script';
+    font-size: 3rem;
 }
 
 .choice-container {
@@ -10,17 +15,17 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 200px;
+    height: 150px;
+    margin: 2rem 0;
 }
 
 .button-container {
-    height: 100px;
-    width: 100px;
-    border: 1px solid var(--button-bg-grey);
+    height: 100%;
+    aspect-ratio: 1/1;
 }
 
 .height-100 {
-    height: 100px;
+    height: 200px;
 }
 
 .img-container {
@@ -29,7 +34,7 @@
     border: 8px outset var(--button-bg-white);
 }
 
-.button-image {
+.img-fit {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -51,5 +56,17 @@
 
 .button-selected {
     border: 8px solid var(--button-bg-grey);
+    border-style: inset;
+}
+
+.large-green-button {
+    height: 100%;
+    aspect-ratio: 3/1;
+    background-color: var(--green-light);
+    border: 8px solid var(--green-right);
+    border-style: outset;
+}
+
+.large-green-button:hover:active {
     border-style: inset;
 }

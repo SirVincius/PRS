@@ -17,10 +17,15 @@
     var buttons = document.querySelectorAll(".emotion-button");
     buttons.forEach(button => button.addEventListener("click", () => {
         button.classList.toggle("button-selected");
+        if (button.getAttribute("data-selected") === "true")
+            button.setAttribute("data-selected", "false");
+        else
+            button.setAttribute("data-selected", "true");
+
     }))
 
     var startButton = document.querySelector("#start-button");
     startButton.addEventListener("click", () => {
         startButton.classList.toggle("button-selected");
     })
-};
+}; 

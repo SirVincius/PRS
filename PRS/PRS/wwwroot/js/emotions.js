@@ -5,29 +5,27 @@
     }
 }
 
+var emotionList = window.gameParameters.emotions
+var numberOfRounds = window.gameParameters.numberOfRounds;
+var index = 0;
+var emotionButtons;
+var rounds;
+
 document.addEventListener("DOMContentLoaded", function () {
-
-    //Retrieve possible emotions list
-    var emotionList = window.gameParameters.emotions
-    var numberOfRounds = window.gameParameters.numberOfRounds;
-
-    //Create an object for each image to recognize with the corresponding emotion
-    var rounds = [];
-    var baseURL = "../images/";
-    rounds.push(new Round(baseURL + "sad/sad_1.png", "Sadness"));
-    rounds.push(new Round(baseURL + "happy/happy_1.png", "Joy"));
     
     //Create a button for each possible emotion
     emotionList.forEach(emotionName => {
         addEmotionButton(emotionName);
     })
 
-    document.getElementById("emotion-to-recognize").src = rounds[1].imageURL;
-    document.getElementById("emotion-to-recognize").dataset.emotion = rounds[1].emotion;
+    //Populate the rounds with an image and an associated emotion
+    rounds = populateRound();
+
+    emotionButtons = document.querySelectorAll(".emotion-button");
 
     activateEmotionButtonEventListeners();
 
-    var counter = 2;
+    nextRound();
 
 })
 
@@ -55,15 +53,42 @@ function addEmotionButton(emotionName) {
 }
 
 function activateEmotionButtonEventListeners() {
-    var emotionButtons = document.querySelectorAll(".emotion-button");
     emotionButtons.forEach(btn => btn.addEventListener("click", function (e) {
         if (e.currentTarget.dataset.emotion == document.getElementById("emotion-to-recognize").dataset.emotion) { 
             e.currentTarget.classList.toggle("right-choice");
             let successSound = new Audio('../sounds/success.mp3');
-            successSound.play();
+            successSound.addEventListener("ended", () => {
+                nextRound();
+            });
             emotionButtons.forEach(btn => btn.disabled = true);
+            successSound.play();
         }
         else
             e.currentTarget.classList.toggle("wrong-choice");
     }))
+}
+
+function populateRound() {
+    var roundList = [];
+    emotionList.forEach(emotion => {
+        for (let i = 1; i <= 5; i++) {
+            let round = new Round(`../images/${emotion}/${emotion}_${i}.png`, emotion);
+            roundList.push(round);
+        }
+    })
+    return roundList;
+}
+
+function nextRound() {
+    //Reset buttons style
+    emotionButtons.forEach(emotionButton => {
+        emotionButton.classList.remove("wrong-choice");
+        emotionButton.classList.remove("right-choice");
+        emotionButton.disabled = false;
+    })
+
+
+    document.getElementById("emotion-to-recognize").src = rounds[index].imageURL;
+    document.getElementById("emotion-to-recognize").dataset.emotion = rounds[index].emotion;
+    index++;
 }

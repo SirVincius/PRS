@@ -8,7 +8,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //Retrieve possible emotions list
-    var emotionList = ["Joy", "Sadness", "Anger", "Love", "Serenity"];
+    var emotionList = window.gameParameters.emotions
+    var numberOfRounds = window.gameParameters.numberOfRounds;
 
     //Create an object for each image to recognize with the corresponding emotion
     var rounds = [];
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     activateEmotionButtonEventListeners();
 
     var counter = 2;
+
 })
 
 function addEmotionButton(emotionName) {
@@ -55,10 +57,13 @@ function addEmotionButton(emotionName) {
 function activateEmotionButtonEventListeners() {
     var emotionButtons = document.querySelectorAll(".emotion-button");
     emotionButtons.forEach(btn => btn.addEventListener("click", function (e) {
-        if (e.target.dataset.emotion == document.getElementById("emotion-to-recognize").dataset.emotion)
-            console.log("Right");
+        if (e.currentTarget.dataset.emotion == document.getElementById("emotion-to-recognize").dataset.emotion) { 
+            e.currentTarget.classList.toggle("right-choice");
+            let successSound = new Audio('../sounds/success.mp3');
+            successSound.play();
+            emotionButtons.forEach(btn => btn.disabled = true);
+        }
         else
-            console.log("Wrong");
-
+            e.currentTarget.classList.toggle("wrong-choice");
     }))
 }

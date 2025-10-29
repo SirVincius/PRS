@@ -32,3 +32,6 @@ C:\Users\vince\source\repos\PRS\PRS\obj\Debug\net8.0\refint\PRS.dll
 C:\Users\vince\source\repos\PRS\PRS\obj\Debug\net8.0\PRS.pdb
 C:\Users\vince\source\repos\PRS\PRS\obj\Debug\net8.0\PRS.genruntimeconfig.cache
 C:\Users\vince\source\repos\PRS\PRS\obj\Debug\net8.0\ref\PRS.dll
+C:\Users\vince\source\repos\PRS\PRS\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\vince\source\repos\PRS\PRS\obj\Debug\net8.0\PRS.csproj.AssemblyReference.cache
+C:\Users\vince\source\repos\PRS\PRS\obj\Debug\net8.0\PRS.csproj.Up2Date

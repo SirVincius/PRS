@@ -8,6 +8,8 @@
 button {
     font-family: 'Segoe Script';
     font-size: 3rem;
+    border: 8px outset var(--button-bg-white);
+    background-color: var(--button-bg-white);
 }
 
 .choice-container {
@@ -21,17 +23,17 @@ button {
 
 .button-container {
     height: 100%;
-    aspect-ratio: 1/1;
+    border: 1px solid black;
 }
 
 .height-100 {
-    height: 200px;
+    height: 150px;
 }
 
 .img-container {
+    aspect-ratio: 1/1;
     height: 100%;
     width: 100%;
-    border: 8px outset var(--button-bg-white);
 }
 
 .img-fit {
@@ -62,11 +64,17 @@ button {
 .large-green-button {
     height: 100%;
     aspect-ratio: 3/1;
-    background-color: var(--green-light);
-    border: 8px solid var(--green-right);
     border-style: outset;
 }
 
-.large-green-button:hover:active {
+.large-green-button:active {
     border-style: inset;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.red-text {
+    color: rgb(163, 0, 0)
 }

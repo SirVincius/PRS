@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Newtonsoft.Json
+
+@{
     ViewData["Title"] = "Émotions";
 }
 
@@ -6,15 +8,21 @@
     <link rel="stylesheet" href="~/css/emotions.css" />
 }
 
-@section Scripts {
-    <script src="~/js/emotions.js"></script>
-}
-
 <div class="flex-container flex-column text-center height100">
     <h1 class="display-4">Emotions</h1>
+    <script>window.gameParameters = {
+        numberOfRounds: @ViewBag.NumberOfRounds,
+        emotions: @Html.Raw(JsonConvert.SerializeObject(ViewBag.Emotions))
+    };
+    </script>
     <div class="flex-item choice-container"><img id="emotion-to-recognize" emotion="default" class="img-fit" alt="Alternate Text" />
     </div>
     <div class="flex-item choice-container"><h1>Choisis la bonne émotion.</h1></div>
     <div id="emotions-choice-container" class="flex-item choice-container">
     </div>
 </div>
+
+
+@section Scripts {
+    <script src="~/js/emotions.js"></script>
+}

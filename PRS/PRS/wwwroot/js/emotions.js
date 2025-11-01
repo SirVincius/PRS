@@ -80,15 +80,17 @@ function populateRound() {
 }
 
 function nextRound() {
-    //Reset buttons style
-    emotionButtons.forEach(emotionButton => {
-        emotionButton.classList.remove("wrong-choice");
-        emotionButton.classList.remove("right-choice");
-        emotionButton.disabled = false;
-    })
+    if (index < numberOfRounds) {
+        //Reset buttons style
+        emotionButtons.forEach(emotionButton => {
+            emotionButton.classList.remove("wrong-choice");
+            emotionButton.classList.remove("right-choice");
+            emotionButton.disabled = false;
+        })
 
 
-    document.getElementById("emotion-to-recognize").src = rounds[index].imageURL;
-    document.getElementById("emotion-to-recognize").dataset.emotion = rounds[index].emotion;
-    index++;
+        document.getElementById("emotion-to-recognize").src = rounds[index].imageURL;
+        document.getElementById("emotion-to-recognize").dataset.emotion = rounds[index].emotion;
+        index++;
+    }
 }

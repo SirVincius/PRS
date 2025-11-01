@@ -36,5 +36,8 @@ namespace PRS.Controllers
                 selectedEmotions = SelectedEmotions
             });
         }
-    }
+
+        public IActionResult Test() 
+            { return View(); }
+        }
 }

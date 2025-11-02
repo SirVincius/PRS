@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //Populate the rounds with an image and an associated emotion
     rounds = populateRound();
+    console.log(rounds);
+    rounds = randomizeRounds(rounds);
+    console.log(rounds);
 
     emotionButtons = document.querySelectorAll(".emotion-button");
 
@@ -77,6 +80,17 @@ function populateRound() {
         }
     })
     return roundList;
+}
+
+function randomizeRounds(roundList) {
+    var randomizedRoundList = [];
+    let random;
+    while (roundList.length > 0) {
+        random = Math.floor(Math.random() * roundList.length);
+        randomizedRoundList.push(roundList[random]);
+        roundList.splice(random, 1);
+    }
+    return randomizedRoundList;
 }
 
 function nextRound() {

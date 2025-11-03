@@ -1,5 +1,3 @@
-wwwroot\css\emotions.css
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\anger\anger_1.png
 wwwroot\images\anger\anger_2.png
@@ -41,6 +39,7 @@ wwwroot\images\serenity\serenity_3.png
 wwwroot\images\serenity\serenity_4.png
 wwwroot\images\serenity\serenity_5.png
 wwwroot\images\test\Test_1.png
+wwwroot\js\emotions.js
 wwwroot\js\emotionsSelect.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -101,4 +100,5 @@ wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
 wwwroot\sounds\success.mp3
-wwwroot\js\emotions.js
+wwwroot\css\emotions.css
+wwwroot\css\site.css
